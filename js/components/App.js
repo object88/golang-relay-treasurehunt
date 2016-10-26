@@ -26,6 +26,15 @@ class App extends React.Component {
     };
   }
 
+  _getResetStyle() {
+    return {
+      backgroundColor: 'red',
+      cursor: 'pointer',
+      textAlign: 'center',
+      width: 100,
+    }
+  }
+
   _handleHidingSpotClick(hidingSpot) {
     if (this._isGameOver()) {
       return;
@@ -39,6 +48,10 @@ class App extends React.Component {
         hidingSpot,
       })
     );
+  }
+
+  _handleResetClick() {
+
   }
 
   _hasFoundTreasure() {
@@ -73,6 +86,7 @@ class App extends React.Component {
         <h1>{ headerText }</h1>
         { this.renderGameBoard() }
         <p>Turns remaining: { this.props.game.turnsRemaining }</p>
+        <p><div onClick={ this._handleResetClick.bind(this) } style={ this._getResetStyle() }>Reset board</div></p>
       </div>
     );
   }
