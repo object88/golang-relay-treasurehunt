@@ -4,7 +4,7 @@ This app is based on the [Relay Treasure](https://github.com/relayjs/relay-start
 
 This kit includes an Golang app server, a GraphQL server, and transpiler-powered JS frontend, that you can use to get started building an app with Relay. For a JS-based walkthrough, see the [Relay tutorial](https://facebook.github.io/relay/docs/tutorial.html).
 
-## Notes
+## Notes / To-do
 
 * Start using Go Vendors.
 * Talk a little about app signing on a Mac.
