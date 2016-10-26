@@ -46,8 +46,11 @@ func (g *Game) CheckHidingSpotForTreasure(id string) {
 			return
 		}
 	}
-	g.TurnsRemaining--
 	hidingSpot := g.GetHidingSpot(id)
+	if hidingSpot.HasBeenChecked {
+		return
+	}
+	g.TurnsRemaining--
 	hidingSpot.HasBeenChecked = true
 }
 

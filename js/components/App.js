@@ -30,6 +30,9 @@ class App extends React.Component {
     if (this._isGameOver()) {
       return;
     }
+    if (hidingSpot.hasBeenChecked) {
+      return;
+    }
     this.props.relay.commitUpdate(
       new CheckHidingSpotForTreasureMutation({
         game: this.props.game,
