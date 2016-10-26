@@ -17,6 +17,12 @@ npm install
 
 Go packages must also be installed.  Instructions TBD.
 
+The schema must be created:
+
+```
+npm run update-schema
+```
+
 ## Running
 
 Start a local server:
